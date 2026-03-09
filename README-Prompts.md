@@ -6,18 +6,20 @@ Ferramenta: Lovable
 - shadcn-ui
 - Tailwind CSS
 
-Prompt inicial:
+### Prompt inicial:
+```txt
 Preciso gerar uma interface agradável simples e minimalista para: 
 1. Receber títulos e descrições de tarefa como solicitação via API (JSON com título e descrição da tarefa); 
 2. Processar e categorizar a urgência/impacto (Score de 1 a 10) usando uma LLM (OpenAI/Anthropic); 
 3. Exibir os resultados em um Dashboard funcional e intuitivo (Incluir à direita: uma To-do list com cards que ficam cinza quando você realizou a tarefa).
+```
 
 Como pedido nas intruções técnicas, apenas iniciei o projeto com Lovable para refiná-lo mais tarde no Cursor.
 
 # Refinamento
 Ferramentas: Cursor e Github Copilot
 
-1. Prompt Inicial:
+### 1. Prompt Inicial:
 ```txt
 O front-end faz aquilo que pedi:
 Interface agradável simples e minimalista para: 
@@ -35,7 +37,8 @@ O modelo me gerou esse código. Porém existem algumas alterações que quero fa
 ```
 
 Após primeiro refinamento, tive uma nova ideia de feature e o gráfico ainda não me agradou então sugeri mudanças:
-2. Segundo prompt:
+
+### 2. Segundo prompt:
 ```txt
 > Dashboard:
 Preciso que o gráfico seja pizza com cores verde (concluídas) e amarelas (pendentes) e esteja abaixo do to-do list, para que a seção de análise de prioridade esteja embaixo de adicionar tarefa. 
@@ -60,7 +63,7 @@ O contexto para IA tem que ser um botão no canto superior da tela que abre uma 
 
 Realizei mais alguns pequenos ajustes e adicionei as funcionalidades de mudança de ordem de tarefa e aba "Categorias", só que agora, com o Copilot, já que Cursor limitou minhas ações.
 
-3. Terceiro prompt:
+### 3. Terceiro prompt:
 ```txt
 Ajustes visuais:
 - Os ícones de edição de Contexto estão na vertical, coloque-os na horizontal.
@@ -78,25 +81,20 @@ Novas funcionalidades:
 
 Após esses prompts, o copilot travou meu código mudando nomes de atributos de 'types' criados anteriorente, então fiz alguns ajustes manuais para consertar. Sugeri alterações visuais novamente.
 
-4. Quarto prompt:
+### 4. Quarto prompt:
 ```txt
 Fiz alguns ajustes no seu código:
 
-1. Erro  nos valores de `SelectItem`
+1. Erro nos valores de `SelectItem`:
 Todos os
-```tsx
 <SelectItem value="">Nenhuma categoria</SelectItem>
-```
 para
-```tsx
 <SelectItem value="none">Nenhuma categoria</SelectItem>
-```
+
 
 2. Inicializei as variáveis 'pending' e 'completed' no `TodoList`:
-```tsx
 const pending = tasks.filter(task => !task.isCompleted);
 const completed = tasks.filter(task => task.isCompleted);
-```
 
 Ademais quero que faça os seguintes ajustes visuais:
 1. Coloque o select de categorias na seção "Nova tarefa" do LADO do título da tarefa, e ajuste esles para a linha que possui os dois ficar da mesma largura da text area descrição da tarefa e coloque a cor do placeholder igual dos outros inputs da seção;
@@ -107,12 +105,13 @@ Ademais quero que faça os seguintes ajustes visuais:
 ```
 
 Ajustes finais:
-5. Quinto prompt:
+
+### 5. Quinto prompt:
 ```txt
 Quero que o gráfico fique fixed e a to-do fique mais compacta com scroll e as tarefas concluídas no to-do list também tem que ficar concluídas no "Análise de prioridades", reorganizando a nova lista. Além disso, adicione um scroll na analise de prioridades, ela está ficando muito grande.
 ```
 
-6. Sexto prompt:
+### 6. Sexto prompt:
 ```txt
 Implemente um light/dark theme simples e coloque o toggle button à esquerda dos botões do header.
 ```
