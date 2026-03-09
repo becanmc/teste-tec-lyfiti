@@ -6,6 +6,7 @@ export interface Task {
   impactScore: number | null;
   isCompleted: boolean;
   createdAt: Date;
+  isScoring?: boolean;
 }
 
 export interface TaskInput {

@@ -3,15 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Plus, Loader2 } from "lucide-react";
+import { Plus } from "lucide-react";
 import type { TaskInput } from "@/types/task";
 
 interface TaskFormProps {
   onSubmit: (task: TaskInput) => Promise<void>;
-  isLoading: boolean;
 }
 
-const TaskForm = ({ onSubmit, isLoading }: TaskFormProps) => {
+const TaskForm = ({ onSubmit }: TaskFormProps) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -34,22 +33,20 @@ const TaskForm = ({ onSubmit, isLoading }: TaskFormProps) => {
             placeholder="Título da tarefa"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            disabled={isLoading}
           />
           <Textarea
             placeholder="Descrição da tarefa..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            disabled={isLoading}
             rows={3}
           />
-          <Button type="submit" disabled={isLoading || !title.trim() || !description.trim()} className="w-full">
-            {isLoading ? (
-              <Loader2 className="animate-spin" />
-            ) : (
-              <Plus />
-            )}
-            {isLoading ? "Analisando..." : "Adicionar Tarefa"}
+          <Button
+            type="submit"
+            disabled={!title.trim() || !description.trim()}
+            className="w-full gap-2"
+          >
+            <Plus className="h-4 w-4" />
+            Adicionar Tarefa
           </Button>
         </form>
       </CardContent>
