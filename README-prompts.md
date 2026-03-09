@@ -120,4 +120,3 @@ Implemente um light/dark theme simples e coloque o toggle button à esquerda dos
 ```txt
 Faça ser responsivo para celulares, o header quebra. Deixa todos os botões acessíveis.
 ```
-
