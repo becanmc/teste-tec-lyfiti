@@ -104,7 +104,7 @@ Ademais quero que faça os seguintes ajustes visuais:
 5. A seção de contexto da IA, corta parte do último card no scroll, certifique que todos os cards sejam mostrados até o final. Além disso, separe o card de form dessa seção, com os cards que mostram os contextos existentes. (Mesma coisa para seção de categoria).
 ```
 
-Ajustes finais:
+Ajustes e ideias finais:
 
 ### 5. Quinto prompt:
 ```txt
@@ -114,4 +114,9 @@ Quero que o gráfico fique fixed e a to-do fique mais compacta com scroll e as t
 ### 6. Sexto prompt:
 ```txt
 Implemente um light/dark theme simples e coloque o toggle button à esquerda dos botões do header.
+```
+
+### 7. Sétimo prompt:
+```txt
+Faça ser responsivo para celulares, o header quebra. Deixa todos os botões acessíveis.
 ```
