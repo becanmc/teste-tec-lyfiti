@@ -323,13 +323,13 @@ const Index = () => {
       </header>
 
       <main className="container max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
           <div className="lg:col-span-2 space-y-6">
             <TaskForm onSubmit={handleAddTask} categories={categories} />
             <ScoredTasksList tasks={tasks} />
           </div>
-          <div>
-            <div className="lg:sticky lg:top-24 space-y-4">
+          <div className="space-y-4">
+            <div className="max-h-[350px] overflow-y-auto pr-2">
               <TodoList
                 tasks={tasks}
                 onToggle={handleToggle}
@@ -338,8 +338,8 @@ const Index = () => {
                 onReorder={handleReorder}
                 categories={categories}
               />
-              <TaskCompletionChart tasks={tasks} />
             </div>
+            <TaskCompletionChart tasks={tasks} />
           </div>
         </div>
       </main>

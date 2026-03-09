@@ -105,3 +105,9 @@ Ademais quero que faça os seguintes ajustes visuais:
 4. Qaundo minimiza a seção de "Nova tarefa" coloque o título com o ícone e a seta alinhados horizontalmente;
 5. A seção de contexto da IA, corta parte do último card no scroll, certifique que todos os cards sejam mostrados até o final. Além disso, separe o card de form dessa seção, com os cards que mostram os contextos existentes. (Mesma coisa para seção de categoria).
 ```
+
+Ajustes finais:
+5. Quinto prompt:
+```txt
+Quero que o gráfico fique fixed e a to-do fique mais compacta com scroll e as tarefas concluídas no to-do list também tem que ficar concluídas no "Análise de prioridades", reorganizando a nova lista.
+```
