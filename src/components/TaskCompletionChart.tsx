@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Task } from "@/types/task";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { PieChart as PieChartIcon } from "lucide-react";
 
 interface TaskCompletionChartProps {
   tasks: Task[];
@@ -20,7 +21,10 @@ const TaskCompletionChart = ({ tasks }: TaskCompletionChartProps) => {
   return (
     <Card>
       <CardHeader className="pb-4">
-        <CardTitle className="text-lg font-semibold">Resumo de Progresso</CardTitle>
+        <CardTitle className="text-lg font-semibold flex items-center gap-2">
+          <PieChartIcon className="h-5 w-5 text-primary" />
+          Resumo de Progresso
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {!hasData ? (

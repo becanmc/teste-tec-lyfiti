@@ -58,7 +58,7 @@ content: Veram trabalha como professora e chega as 22h em casa todos os dias út
 O contexto para IA tem que ser um botão no canto superior da tela que abre uma nav-bar a direita do To-do e mostre todos os contextos atuais, para que o usuário possa editá-lo e visualizá-los melhor.
 ```
 
-Realizei mais alguns pequenos ajustes e adicionei as funcionalidades de mudança de ordem de tarefa e aba "Categorias"
+Realizei mais alguns pequenos ajustes e adicionei as funcionalidades de mudança de ordem de tarefa e aba "Categorias", só que agora, com o Copilot, já que Cursor limitou minhas ações.
 
 3. Terceiro prompt:
 ```txt
@@ -75,3 +75,7 @@ Novas funcionalidades:
 - O usuário pode querer mudar a ordem das tarefas, adicione a funcionalidade de clicar e arrastar na to-do list, apra editar a ordem de tarefa.
 - Coloque uma nova funcionalidade e "Categorias" com o mesmo padrão "Contexto da IA", onde o usuário poderá atribuir cores as categorias criadas por ele,m ea tribuir essas mesmas categorias ao CRUD de tarefas.
 ```
+
+Após esses prompts, o copilot travou meu código mudando nomes de atributos de 'types' criados anteriorente, então fiz alguns ajustes manuais para consertar. Sugeri alterações visuais novamente.
+
+4. Quarto prompt:

@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Trash2 } from "lucide-react";
+import { Trash2, Pencil } from "lucide-react";
 import type { ContextEntry } from "@/types/context";
 
 interface ContextPanelProps {
@@ -130,14 +130,14 @@ const ContextPanel = ({ contexts, onAdd, onDelete, onUpdate }: ContextPanelProps
                           {ctx.content}
                         </div>
                       </div>
-                      <div className="flex flex-col gap-1">
+                      <div className="flex items-center gap-1">
                         <button
                           type="button"
                           onClick={() => startEdit(ctx)}
                           className="inline-flex h-6 w-6 items-center justify-center rounded-md border bg-background text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                           aria-label="Editar contexto"
                         >
-                          ✏️
+                          <Pencil className="h-3.5 w-3.5" />
                         </button>
                         <button
                           type="button"

@@ -6,10 +6,13 @@ export interface Task {
   impactScore: number | null;
   isCompleted: boolean;
   createdAt: Date;
+  order: number;
+  categoryId?: string;
   isScoring?: boolean;
 }
 
 export interface TaskInput {
   title: string;
   description: string;
+  categoryId?: string;
 }
