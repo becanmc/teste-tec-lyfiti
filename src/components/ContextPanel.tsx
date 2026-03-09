@@ -55,7 +55,7 @@ const ContextPanel = ({ contexts, onAdd, onDelete, onUpdate }: ContextPanelProps
           pessoal ou do projeto.
         </p>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4 pb-4">
         <div className="space-y-2">
           <div className="flex gap-2">
             <Input
@@ -82,7 +82,7 @@ const ContextPanel = ({ contexts, onAdd, onDelete, onUpdate }: ContextPanelProps
         </div>
 
         {contexts.length > 0 && (
-          <div className="border-t pt-4 space-y-3">
+          <div className="border-t pt-4 space-y-3 pb-4">
             {contexts.map((ctx) => {
               const isEditing = editingId === ctx.id;
 

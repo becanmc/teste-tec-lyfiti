@@ -39,13 +39,13 @@ const ScoredTasksList = ({ tasks }: ScoredTasksListProps) => {
           </p>
         )}
       </CardHeader>
-      <CardContent>
+      <CardContent className="pb-4">
         {scoredTasks.length === 0 ? (
           <p className="text-sm text-muted-foreground text-center py-8">
             Adicione tarefas para ver a análise de prioridade.
           </p>
         ) : (
-          <div className="space-y-3">
+          <div className="max-h-[500px] overflow-y-auto pr-2 space-y-3">
             {(() => {
               const pendingTasks = scoredTasks.filter((t) => !t.isCompleted);
               const completedTasks = scoredTasks.filter((t) => t.isCompleted);

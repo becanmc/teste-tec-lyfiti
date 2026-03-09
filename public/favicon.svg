@@ -1,0 +1,10 @@
+<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="180" height="180" fill="#0f172a"/>
+  
+  <!-- Checkbox -->
+  <rect x="30" y="30" width="120" height="120" rx="12" fill="none" stroke="#3b82f6" stroke-width="8"/>
+  
+  <!-- Checkmark -->
+  <path d="M 50 95 L 75 120 L 130 50" stroke="#3b82f6" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

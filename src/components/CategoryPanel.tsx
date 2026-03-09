@@ -53,7 +53,7 @@ const CategoryPanel = ({ categories, onAdd, onDelete, onUpdate }: CategoryPanelP
           Crie categorias para organizar suas tarefas e atribua cores a elas.
         </p>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4 pb-4">
         <div className="space-y-2">
           <div className="flex gap-2">
             <Input
@@ -80,7 +80,7 @@ const CategoryPanel = ({ categories, onAdd, onDelete, onUpdate }: CategoryPanelP
         </div>
 
         {categories.length > 0 && (
-          <div className="border-t pt-4 space-y-3">
+          <div className="border-t pt-4 space-y-3 pb-4">
             {categories.map((category) => {
               const isEditing = editingId === category.id;
 
