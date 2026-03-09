@@ -54,7 +54,7 @@ const CategoryPanel = ({ categories, onAdd, onDelete, onUpdate }: CategoryPanelP
         </p>
       </CardHeader>
       <CardContent className="space-y-4">
-        <form onSubmit={handleAdd} className="space-y-2">
+        <div className="space-y-2">
           <div className="flex gap-2">
             <Input
               placeholder="Nome da categoria"
@@ -65,7 +65,7 @@ const CategoryPanel = ({ categories, onAdd, onDelete, onUpdate }: CategoryPanelP
               type="color"
               value={colorValue}
               onChange={(e) => setColorValue(e.target.value)}
-              className="w-12 h-9 rounded border"
+              className="h-10 w-14 rounded border cursor-pointer"
             />
           </div>
           <Button
@@ -73,13 +73,14 @@ const CategoryPanel = ({ categories, onAdd, onDelete, onUpdate }: CategoryPanelP
             size="sm"
             className="w-full"
             disabled={!nameValue.trim()}
+            onClick={handleAdd}
           >
             Adicionar categoria
           </Button>
-        </form>
+        </div>
 
         {categories.length > 0 && (
-          <div className="space-y-3 pt-2">
+          <div className="border-t pt-4 space-y-3">
             {categories.map((category) => {
               const isEditing = editingId === category.id;
 

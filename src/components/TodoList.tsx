@@ -242,10 +242,11 @@ const TodoList = ({ tasks, onToggle, onDelete, onEdit, onReorder, categories }: 
               </DndContext>
               {completed.length > 0 && (
                 <>
-                  <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider pt-3 pb-1">
+                  <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider pt-3 pb-2">
                     Concluídas ({completed.length})
                   </div>
-                  {completed.map((task) => (
+                  <div className="space-y-2">
+                    {completed.map((task) => (
                     <div
                       key={task.id}
                       className={cn(
@@ -275,6 +276,7 @@ const TodoList = ({ tasks, onToggle, onDelete, onEdit, onReorder, categories }: 
                       </button>
                     </div>
                   ))}
+                  </div>
                 </>
               )}
             </>

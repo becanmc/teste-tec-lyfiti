@@ -56,7 +56,7 @@ const ContextPanel = ({ contexts, onAdd, onDelete, onUpdate }: ContextPanelProps
         </p>
       </CardHeader>
       <CardContent className="space-y-4">
-        <form onSubmit={handleAdd} className="space-y-2">
+        <div className="space-y-2">
           <div className="flex gap-2">
             <Input
               placeholder="Palavra-chave (ex: Outlier, Chiara, Mãe)"
@@ -75,13 +75,14 @@ const ContextPanel = ({ contexts, onAdd, onDelete, onUpdate }: ContextPanelProps
             size="sm"
             className="w-full"
             disabled={!keyValue.trim() || !contentValue.trim()}
+            onClick={handleAdd}
           >
             Adicionar contexto
           </Button>
-        </form>
+        </div>
 
         {contexts.length > 0 && (
-          <div className="space-y-3 pt-2">
+          <div className="border-t pt-4 space-y-3">
             {contexts.map((ctx) => {
               const isEditing = editingId === ctx.id;
 

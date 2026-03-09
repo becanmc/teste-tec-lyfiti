@@ -73,9 +73,35 @@ Melhorias:
 
 Novas funcionalidades:
 - O usuário pode querer mudar a ordem das tarefas, adicione a funcionalidade de clicar e arrastar na to-do list, apra editar a ordem de tarefa.
-- Coloque uma nova funcionalidade e "Categorias" com o mesmo padrão "Contexto da IA", onde o usuário poderá atribuir cores as categorias criadas por ele,m ea tribuir essas mesmas categorias ao CRUD de tarefas.
+- Coloque uma nova funcionalidade e "Categorias" com o mesmo padrão "Contexto da IA", onde o usuário poderá atribuir cores as categorias criadas por ele, e atribuir essas mesmas categorias ao CRUD de tarefas.
 ```
 
 Após esses prompts, o copilot travou meu código mudando nomes de atributos de 'types' criados anteriorente, então fiz alguns ajustes manuais para consertar. Sugeri alterações visuais novamente.
 
 4. Quarto prompt:
+```txt
+Fiz alguns ajustes no seu código:
+
+1. Erro  nos valores de `SelectItem`
+Todos os
+```tsx
+<SelectItem value="">Nenhuma categoria</SelectItem>
+```
+para
+```tsx
+<SelectItem value="none">Nenhuma categoria</SelectItem>
+```
+
+2. Inicializei as variáveis 'pending' e 'completed' no `TodoList`:
+```tsx
+const pending = tasks.filter(task => !task.isCompleted);
+const completed = tasks.filter(task => task.isCompleted);
+```
+
+Ademais quero que faça os seguintes ajustes visuais:
+1. Coloque o select de categorias na seção "Nova tarefa" do LADO do título da tarefa, e ajuste esles para a linha que possui os dois ficar da mesma largura da text area descrição da tarefa e coloque a cor do placeholder igual dos outros inputs da seção;
+2. Quando marca "done" e acumula as tarefas concluídas na to-do list, elas ficam se encostando. Adicione um espaço entrel elas;
+3. O input type color nas categorias está um poco desagradável, faça com que a cor preencha o input todo com a mesma altura do input de nome da categoria;
+4. Qaundo minimiza a seção de "Nova tarefa" coloque o título com o ícone e a seta alinhados horizontalmente;
+5. A seção de contexto da IA, corta parte do último card no scroll, certifique que todos os cards sejam mostrados até o final. Além disso, separe o card de form dessa seção, com os cards que mostram os contextos existentes. (Mesma coisa para seção de categoria).
+```
