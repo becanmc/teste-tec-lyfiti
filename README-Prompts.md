@@ -17,7 +17,7 @@ Como pedido nas intruções técnicas, apenas iniciei o projeto com Lovable para
 # Refinamento
 Ferramenta: Cursor
 
-Prompt Inicial:
+1. Prompt Inicial:
 ```txt
 O front-end faz aquilo que pedi:
 Interface agradável simples e minimalista para: 
@@ -34,4 +34,44 @@ O modelo me gerou esse código. Porém existem algumas alterações que quero fa
 - Edição de to-do list. Mostrar um card para editar (logicamente com reavaliação do modelo) e excluir demandas.
 ```
 
-Após primeiro refinamento, o gráfico ainda não me agradou então sugeri mudança:
+Após primeiro refinamento, tive uma nova ideia de feature e o gráfico ainda não me agradou então sugeri mudanças:
+```txt
+2. Segundo prompt:
+> Dashboard:
+Preciso que o gráfico seja pizza com cores verde (concluídas) e amarelas (pendentes) e esteja abaixo do to-do list, para que a seção de análise de prioridade esteja embaixo de adicionar tarefa. 
+
+> Melhorias adicionais:
+Quero que a seção de adicionar tarefa possa ser minimizada.
+
+> Nova feature:
+Quero que exista um ambiente de contextualização apra IA,onde possa adicionar contexto, exemplo: 
+```
+key: Outlier
+content: plataforma de freelance para ganhar dinheiro em dólar
+-
+key: Chiara
+content: Minha cachorra maltês que nasceu em agosto de 2013
+-
+key: Mãe 
+content: Veram trabalha como professora e chega as 22h em casa todos os dias úteis
+```
+O contexto para IA tem que ser um botão no canto superior da tela que abre uma nav-bar a direita do To-do e mostre todos os contextos atuais, para que o usuário possa editá-lo e visualizá-los melhor.
+```
+
+Realizei mais alguns pequenos ajustes e adicionei as funcionalidades de mudança de ordem de tarefa e aba "Categorias"
+
+3. Terceiro prompt:
+```txt
+Ajustes visuais:
+- Os ícones de edição de Contexto estão na vertical, coloque-os na horizontal.
+- As seções de nova tarefa e resumo do progressso, não tem um ícone como as seções de "To-do" e "Análise de Prioridade". Coloque icónes no mesmo padrão.
+- O "minimizar" da seçao do nova tarefa está sem animação e quando a seção está minimizada o texto não fica centralizao com a seta.
+- O header está sem vida. Adicione um ícone que faça sentido com o Task Prioriteizer (Este ícone tem que ser o mesmo ícone do `og:image` que fica na aba do navegador.)
+
+Melhorias:
+- Salve o hsitórico e as tarefas do usuário para ele não precisar recolocar em nenhuma reinicialização da API.
+
+Novas funcionalidades:
+- O usuário pode querer mudar a ordem das tarefas, adicione a funcionalidade de clicar e arrastar na to-do list, apra editar a ordem de tarefa.
+- Coloque uma nova funcionalidade e "Categorias" com o mesmo padrão "Contexto da IA", onde o usuário poderá atribuir cores as categorias criadas por ele,m ea tribuir essas mesmas categorias ao CRUD de tarefas.
+```

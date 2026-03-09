@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    const { title, description } = await req.json();
+    const { title, description, contexts } = await req.json();
 
     if (!title || !description) {
       return new Response(
@@ -26,6 +26,35 @@ serve(async (req) => {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
+    const contextText =
+      Array.isArray(contexts) && contexts.length > 0
+        ? contexts
+            .map(
+              (ctx: { key: string; content: string }) =>
+                `- ${ctx.key}: ${ctx.content}`,
+            )
+            .join("\n")
+        : null;
+
+    const messages: unknown[] = [
+      {
+        role: "system",
+        content:
+          "You are a task prioritization assistant. Given a task title and description, evaluate its urgency and impact on a scale of 1 to 10. Urgency = how time-sensitive it is. Impact = how much value completing it delivers. Use the tool provided to return your scores. When user-specific context is provided, use it to better understand what is more important for this person.",
+      },
+      {
+        role: "user",
+        content: `Task: "${title}"\nDescription: "${description}"`,
+      },
+    ];
+
+    if (contextText) {
+      messages.push({
+        role: "user",
+        content: `Additional context about this user and their world:\n${contextText}`,
+      });
+    }
+
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -34,17 +63,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         model: "google/gemini-3-flash-preview",
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a task prioritization assistant. Given a task title and description, evaluate its urgency and impact on a scale of 1 to 10. Urgency = how time-sensitive it is. Impact = how much value completing it delivers. Use the tool provided to return your scores.",
-          },
-          {
-            role: "user",
-            content: `Task: "${title}"\nDescription: "${description}"`,
-          },
-        ],
+        messages,
         tools: [
           {
             type: "function",
