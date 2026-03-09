@@ -1,0 +1,4 @@
+project_id = "hpvrucomhswzavqlhqwm"
+
+[functions.score-task]
+verify_jwt = false
