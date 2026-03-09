@@ -80,7 +80,7 @@ Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aq
 - Suporte a operações sem recarregar a página
 
 ## Acesse o projeto
-[Clique aqui](https://) para acessar o respositório ou copie e cole no seu navegador o seguinte link: ""
+[Clique aqui](https://teste-tecnico-lyfiti.vercel.app/) para acessar o respositório ou copie e cole no seu navegador o seguinte link: https://teste-tecnico-lyfiti.vercel.app/
 
 ## Rode o código localmente
 Para rodar o projeto localmente é necessário ter Node.js & npm instalado - [Instale com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
