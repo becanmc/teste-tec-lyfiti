@@ -31,33 +31,10 @@ const TaskForm = ({ onSubmit, categories }: TaskFormProps) => {
   return (
     <Card>
       <CardHeader className="pb-2 flex flex-row items-center justify-between gap-2">
-        <div className="flex items-center gap-2 flex-1 min-w-0">
-          <CardTitle className="text-lg font-semibold flex items-center gap-2 shrink-0">
-            <Plus className="h-5 w-5 text-primary" />
-            Nova Tarefa
-          </CardTitle>
-          {categories.length > 0 && !isCollapsed && (
-            <Select value={categoryId} onValueChange={setCategoryId}>
-              <SelectTrigger className="w-48">
-                <SelectValue placeholder="Selecionar categoria" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="none">Nenhuma categoria</SelectItem>
-                {categories.map((category) => (
-                  <SelectItem key={category.id} value={category.id}>
-                    <div className="flex items-center gap-2">
-                      <div
-                        className="w-3 h-3 rounded-full"
-                        style={{ backgroundColor: category.color }}
-                      />
-                      {category.name}
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          )}
-        </div>
+        <CardTitle className="text-lg font-semibold flex items-center gap-2">
+          <Plus className="h-5 w-5 text-primary" />
+          Nova Tarefa
+        </CardTitle>
         <Button
           type="button"
           variant="ghost"
@@ -72,11 +49,35 @@ const TaskForm = ({ onSubmit, categories }: TaskFormProps) => {
       {!isCollapsed && (
         <CardContent className="transition-all duration-300 ease-in-out">
           <form onSubmit={handleSubmit} className="space-y-3">
-            <Input
-              placeholder="Título da tarefa"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
+            <div className="flex gap-3">
+              <Input
+                placeholder="Título da tarefa"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="flex-1"
+              />
+              {categories.length > 0 && (
+                <Select value={categoryId} onValueChange={setCategoryId}>
+                  <SelectTrigger className="w-48">
+                    <SelectValue placeholder="Selecionar categoria" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="none">Nenhuma categoria</SelectItem>
+                    {categories.map((category) => (
+                      <SelectItem key={category.id} value={category.id}>
+                        <div className="flex items-center gap-2">
+                          <div
+                            className="w-3 h-3 rounded-full"
+                            style={{ backgroundColor: category.color }}
+                          />
+                          {category.name}
+                        </div>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              )}
+            </div>
             <Textarea
               placeholder="Descrição da tarefa..."
               value={description}
