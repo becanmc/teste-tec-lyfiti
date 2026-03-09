@@ -15,7 +15,7 @@ Preciso gerar uma interface agradável simples e minimalista para:
 Como pedido nas intruções técnicas, apenas iniciei o projeto com Lovable para refiná-lo mais tarde no Cursor.
 
 # Refinamento
-Ferramenta: Cursor
+Ferramentas: Cursor e Github Copilot
 
 1. Prompt Inicial:
 ```txt
@@ -35,8 +35,8 @@ O modelo me gerou esse código. Porém existem algumas alterações que quero fa
 ```
 
 Após primeiro refinamento, tive uma nova ideia de feature e o gráfico ainda não me agradou então sugeri mudanças:
-```txt
 2. Segundo prompt:
+```txt
 > Dashboard:
 Preciso que o gráfico seja pizza com cores verde (concluídas) e amarelas (pendentes) e esteja abaixo do to-do list, para que a seção de análise de prioridade esteja embaixo de adicionar tarefa. 
 
@@ -109,5 +109,10 @@ Ademais quero que faça os seguintes ajustes visuais:
 Ajustes finais:
 5. Quinto prompt:
 ```txt
-Quero que o gráfico fique fixed e a to-do fique mais compacta com scroll e as tarefas concluídas no to-do list também tem que ficar concluídas no "Análise de prioridades", reorganizando a nova lista.
+Quero que o gráfico fique fixed e a to-do fique mais compacta com scroll e as tarefas concluídas no to-do list também tem que ficar concluídas no "Análise de prioridades", reorganizando a nova lista. Além disso, adicione um scroll na analise de prioridades, ela está ficando muito grande.
+```
+
+6. Sexto prompt:
+```txt
+Implemente um light/dark theme simples e coloque o toggle button à esquerda dos botões do header.
 ```

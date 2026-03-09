@@ -6,6 +6,7 @@ import TodoList from "@/components/TodoList";
 import TaskCompletionChart from "../components/TaskCompletionChart";
 import CategoryPanel from "@/components/CategoryPanel";
 import ContextPanel from "@/components/ContextPanel";
+import { useTheme } from "@/contexts/ThemeContext";
 import type { Task, TaskInput } from "@/types/task";
 import type { ContextEntry } from "@/types/context";
 import type { Category } from "@/types/category";
@@ -19,9 +20,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Sparkles, CheckSquare, Tags } from "lucide-react";
+import { Sparkles, CheckSquare, Tags, Moon, Sun } from "lucide-react";
 
 const Index = () => {
+  const { theme, toggleTheme } = useTheme();
   const [tasks, setTasks] = useState<Task[]>([]);
   const [contexts, setContexts] = useState<ContextEntry[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -259,7 +261,21 @@ const Index = () => {
               Categorize tarefas por urgência e impacto com IA
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={toggleTheme}
+              className="gap-2"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+            </Button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button
