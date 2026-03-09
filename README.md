@@ -29,6 +29,9 @@ Vercel.
 | 09/03/2026 | 1.0.0 | Lançamento inicial | - |
 | 11/03/2026 | 1.0.0 | Limite máximo para entrega | 23:59 (GMT-3) |
 
+### > Prompts utilizados
+Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aqui](https://github.com/becanmc/teste-tec-lyfiti/blob/main/README-prompts.md)
+
 ## Funcionalidades
 
 ### Requisitos alcançados:
