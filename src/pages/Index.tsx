@@ -251,23 +251,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
-          <div>
-            <h1 className="text-xl font-bold tracking-tight flex items-center gap-2">
+        <div className="container max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="text-center sm:text-left">
+            <h1 className="text-lg sm:text-xl font-bold tracking-tight flex items-center gap-2 justify-center sm:justify-start">
               <CheckSquare className="h-6 w-6 text-primary" />
               Task Prioritizer
             </h1>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground hidden sm:block">
               Categorize tarefas por urgência e impacto com IA
             </p>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex flex-col sm:flex-row gap-2 items-center w-full sm:w-auto">
             <Button
               type="button"
               variant="outline"
               size="sm"
               onClick={toggleTheme}
-              className="gap-2"
+              className="gap-2 w-full sm:w-auto"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
@@ -282,7 +282,7 @@ const Index = () => {
                   type="button"
                   variant="outline"
                   size="sm"
-                  className="gap-2"
+                  className="gap-2 w-full sm:w-auto"
                 >
                   <Sparkles className="h-4 w-4 text-primary" />
                   Contexto da IA
@@ -311,7 +311,7 @@ const Index = () => {
                   type="button"
                   variant="outline"
                   size="sm"
-                  className="gap-2"
+                  className="gap-2 w-full sm:w-auto"
                 >
                   <Tags className="h-4 w-4 text-primary" />
                   Categorias

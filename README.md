@@ -74,6 +74,7 @@ Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aq
 - Minimização da seção de nova tarefa com animação e abertura de nav-bars horizontais (contextualização e categorias)
 
 ### 8. Interface Refinada
+- Site responsivo e acessível em celulares
 - Ícones consistentes em todas as seções
 - Separação visual entre form e items nos painéis
 - Tema minimalista e limpo
