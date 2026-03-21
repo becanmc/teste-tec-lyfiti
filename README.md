@@ -1,6 +1,8 @@
 # Task Prioritizer
 Task Prioritizer is a smart task organizer created with Vibe Coding, which uses Artificial Intelligence to help the user calculate the importance and urgency of each task. With this, the AI ​​orders the tasks entered by the user according to scores from 1 to 10 (urgency/impact).
 
+(🌍🇧🇷 Para ler esse README em **Português** vá para [README-pt-br](https://github.com/becanmc/task-prioritizer/blob/main/README-pt-br.md))
+
 ## 🛠️ Technologies and Tools
 
 ### 🖥️ Front-end:
