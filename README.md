@@ -1,11 +1,5 @@
-# Teste Técnico Lyfiti
-MVP funcional de um sistema de priorização inteligente feito por Rebeca Costa.
-
-💻 O Desafio: The Hybrid Architect (AI-Priority Middleware)
-
-1. Receber solicitações via API (JSON com título e descrição da tarefa).
-2. Processar e categorizar a urgência/impacto (Score de 1 a 10) usando uma LLM (OpenAI/Anthropic).
-3. Exibir os resultados em um Dashboard funcional e intuitivo.
+# Task Prioritizer
+O Task Prioritizer é um organizador de tarefas inteligentes criado com Vibe Coding, que usa Inteligência Artificial para ajudar o usuário a calcular a importância e urgência de cada tarefa. Com isso, a IA ordena as tarefas inseridas pelo usuário, de acordo com scores de 1 a 10 (urgência/impacto).
 
 ## Tecnologias
 
@@ -27,7 +21,6 @@ Vercel.
 | Data | Versão | Descrição | Horário |
 | :--- | :--- | :--- | :--- |
 | 09/03/2026 | 1.0.0 | Lançamento inicial | - |
-| 11/03/2026 | 1.0.0 | Limite máximo para entrega | 23:59 (GMT-3) |
 
 ### > Prompts utilizados
 Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aqui](https://github.com/becanmc/teste-tec-lyfiti/blob/main/README-prompts.md)
@@ -53,8 +46,6 @@ Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aq
 - Destaque da tarefa recomendada para começar
 - Gráfico de pizza mostrando conclusão vs pendentes
 
-
-### Funcionalidades extras:
 ### 4. Contextualização para IA
 - Painel de contexto personalizável (key: value)
 - Adicionar/editar/deletar contextos
@@ -117,4 +108,4 @@ npm run dev
 
 ## Autor
 #### Feito originalmente por Rebeca Costa.
-[Github](https://github.com/becanmc) | [LinkedIN](https://www.linkedin.com/in/becanmc/) | [WhatsApp](https://wa.me/5531986765308) | rebecanmcosta@gmail.com
+[Github](https://github.com/becanmc) | [LinkedIn](https://www.linkedin.com/in/becanmc/) | [WhatsApp](https://wa.me/5531986765308) | rebecanmcosta@gmail.com

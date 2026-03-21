@@ -14,8 +14,6 @@ Preciso gerar uma interface agradável simples e minimalista para:
 3. Exibir os resultados em um Dashboard funcional e intuitivo (Incluir à direita: uma To-do list com cards que ficam cinza quando você realizou a tarefa).
 ```
 
-Como pedido nas intruções técnicas, apenas iniciei o projeto com Lovable para refiná-lo mais tarde no Cursor.
-
 # Refinamento
 Ferramentas: Cursor e Github Copilot
 
