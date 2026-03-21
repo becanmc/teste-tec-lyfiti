@@ -77,7 +77,7 @@ Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aq
 
 
 ## 🌐 Acesse o projeto
-[Clique aqui](https://teste-tecnico-lyfiti.vercel.app/) para acessar o respositório ou copie e cole no seu navegador o seguinte link: https://teste-tecnico-lyfiti.vercel.app/
+[Clique aqui](https://task-prioritizer-with-gemini.vercel.app/) para acessar o respositório ou copie e cole no seu navegador o seguinte link: https://task-prioritizer-with-gemini.vercel.app/
 
 
 ## 🏠 Rode o código localmente
