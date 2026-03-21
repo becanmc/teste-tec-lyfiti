@@ -1,9 +1,9 @@
 # Task Prioritizer
 O Task Prioritizer é um organizador de tarefas inteligentes criado com Vibe Coding, que usa Inteligência Artificial para ajudar o usuário a calcular a importância e urgência de cada tarefa. Com isso, a IA ordena as tarefas inseridas pelo usuário, de acordo com scores de 1 a 10 (urgência/impacto).
 
-## Tecnologias
+## 🛠️ Tecnologias e Ferramentas
 
-### > Front-end:
+### 🖥️ Front-end:
 Ferramenta utilizada: Lovable.
 - Vite
 - TypeScript
@@ -11,73 +11,72 @@ Ferramenta utilizada: Lovable.
 - shadcn-ui
 - Tailwind CSS
 
-### > LLM (IA) utilizada: 
+### 🧠 LLM (IA) utilizada: 
 Gemini 3 Flash Preview.
 
-### > Lógica/Refinamento:
+### 🪡 Lógica/Refinamento:
 Cursor e Copilot.
 
-### > Deploy: 
+### 📦 Deploy: 
 Vercel.
 
-### > Datas úteis:
+## 📅 Datas úteis
 | Data | Versão | Descrição | Horário |
 | :--- | :--- | :--- | :--- |
 | 09/03/2026 | 1.0.0 | Lançamento inicial | - |
 
-### > Prompts utilizados
-Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aqui](https://github.com/becanmc/teste-tec-lyfiti/blob/main/README-prompts.md)
+## 📝 Prompts utilizados
+Para ter acesso a documentação de prompts, vá em README-prompts ou [clique aqui](https://github.com/becanmc/task-prioritizer/blob/main/README-prompts.md)
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
-### Requisitos alcançados:
-### 1. CRUD de tarefas via API
+### 1. CRUD de tarefas via API ✅
 - **Adicionar** novas tarefas com título e descrição
 - **Editar** tarefas existentes
 - **Deletar** tarefas
 - Marcar tarefas como **concluídas**
 
-### 2. Processar e categorizar a urgência/impacto 
+### 2. Processar e categorizar a urgência/impacto ✅
 - Análise automática usando LLM (Supabase Functions)
 - Scores de Urgência e Impacto (1-10)
 - Interface não-bloqueante (usuário pode adicionar enquanto IA analisa)
 - Recomendação de ordem de execução baseada em scores combinados
 
-### 3. Exibir os resultados em um Dashboard funcional e intuitivo
+### 3. Exibir os resultados em um Dashboard funcional e intuitivo ✅
 - Lista organizada de tarefas pendentes numeradas
 - Seção separada de tarefas concluídas
 - Destaque da tarefa recomendada para começar
 - Gráfico de pizza mostrando conclusão vs pendentes
 
-### 4. Contextualização para IA
+### 4. Contextualização para IA ✅
 - Painel de contexto personalizável (key: value)
 - Adicionar/editar/deletar contextos
 - Contextos influenciam os scores da IA
 
-### 5. Categorias de Tarefas
+### 5. Categorias de Tarefas ✅
 - Criar categorias com cores personalizáveis
 - Atribuir categorias às tarefas
 - Visualizar tarefas por categoria
 
-### 6. Light/Dark mode
+### 6. Light/Dark mode ✅
 - Interface responde ao botão de toggle light no header
 
-### 7. Usabilidade Avançada
+### 7. Usabilidade Avançada ✅
 - Drag-and-drop para reordenar tarefas
 - Persistência em localStorage (tarefas, contextos, categorias)
 - Minimização da seção de nova tarefa com animação e abertura de nav-bars horizontais (contextualização e categorias)
 
-### 8. Interface Refinada
+### 8. Interface Refinada ✅
 - Site responsivo e acessível em celulares
 - Ícones consistentes em todas as seções
 - Separação visual entre form e items nos painéis
 - Tema minimalista e limpo
 - Suporte a operações sem recarregar a página
 
-## Acesse o projeto
+## 🌐 Acesse o projeto
 [Clique aqui](https://teste-tecnico-lyfiti.vercel.app/) para acessar o respositório ou copie e cole no seu navegador o seguinte link: https://teste-tecnico-lyfiti.vercel.app/
 
-## Rode o código localmente
+## 🏠 Rode o código localmente
 Para rodar o projeto localmente é necessário ter Node.js & npm instalado - [Instale com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Siga esses passos:
