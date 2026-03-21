@@ -82,10 +82,10 @@ Para rodar o projeto localmente é necessário ter Node.js & npm instalado - [In
 Siga esses passos:
 ```sh
 # Passo 1: Clone o repositório usando a URL Git do projeto.
-git clone https://github.com/becanmc/teste-tec-lyfiti
+git clone https://github.com/becanmc/task-prioritizer
 
 # Passo 2: Navegue até o diretório do projeto.
-cd test-tec-lyfiti
+cd task-prioritizer
 
 # Etapa 3: Instale as dependências necessárias.
 npm i
