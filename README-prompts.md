@@ -46,7 +46,7 @@ Quero que a seção de adicionar tarefa possa ser minimizada.
 
 > Nova feature:
 Quero que exista um ambiente de contextualização apra IA,onde possa adicionar contexto, exemplo: 
-```
+
 key: Outlier
 content: plataforma de freelance para ganhar dinheiro em dólar
 -
@@ -55,7 +55,7 @@ content: Minha cachorra maltês que nasceu em agosto de 2013
 -
 key: Mãe 
 content: Veram trabalha como professora e chega as 22h em casa todos os dias úteis
-```
+
 O contexto para IA tem que ser um botão no canto superior da tela que abre uma nav-bar a direita do To-do e mostre todos os contextos atuais, para que o usuário possa editá-lo e visualizá-los melhor.
 ```
 

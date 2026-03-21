@@ -11,6 +11,9 @@ Ferramenta utilizada: Lovable.
 - shadcn-ui
 - Tailwind CSS
 
+### > LLM (IA) utilizada: 
+Gemini 3 Flash Preview.
+
 ### > Lógica/Refinamento:
 Cursor e Copilot.
 
